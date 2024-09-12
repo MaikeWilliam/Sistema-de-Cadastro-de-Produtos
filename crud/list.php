@@ -25,13 +25,18 @@
 
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
+                $preco_formatado = number_format($row['preco'], 0, ',', '.');
+
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . $row['nome'] . "</td>";
-                echo "<td>" . $row['preco'] . "</td>";
+                echo "<td>" . "R$" . $preco_formatado . "</td>";
                 echo "<td>" . $row['descricao'] . "</td>";
                 echo "<td><img src='uploads/" . $row['imagem'] . "' alt='Imagem' width='100'></td>";
-                echo "<td><a href='update.php?id=" . $row['id'] . "'>Editar</a> | <a href='delete.php?id=" . $row['id'] . "'>Deletar</a></td>";
+                echo "<td>
+                    <a href='update.php?id=" . $row['id'] . "'><button class='action-btn'>Editar</button></a>  
+                    <a href='delete.php?id=" . $row['id'] . "'><button class='action-btn delete-btn'>Excluir</button></a>
+                     </td>";
                 echo "</tr>";
             }
         } else {
@@ -40,6 +45,6 @@
         $conn->close();
         ?>
     </table>
-    <a href="../index.php">Voltar</a>
+    <a href="create.php"><button class="action-btn">Adicionar Novo Produto</button></a>
 </body>
 </html>

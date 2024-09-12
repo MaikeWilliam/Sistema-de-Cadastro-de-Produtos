@@ -2,26 +2,136 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
+
 h1 {
     color: #333;
 }
+
 form {
     margin-bottom: 20px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
-table,
+
+a {
+    text-decoration: none;
+}
+
 th,
 td {
     border: 1px solid #ddd;
-}
-th,
-td {
     padding: 8px;
-    text-align: left;
+    text-align: center; 
 }
+
+th {
+    background-color: #f2f2f2;
+}
+
 img {
     max-width: 100px;
+}
+
+button {
+    background-color: #1485b7; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+button:hover {
+    background-color: #0c6b9c; /
+}
+
+.success-message {
+    margin-bottom: 20px; 
+}
+
+.success-message a button {
+    margin-top: 10px; 
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão atualizar do update */
+
+form button {
+    background-color: #1485b7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #0c6b9c;
+}
+
+
+/* Botões editar e excluir*/
+
+.action-btn {
+    background-color: #1485B7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.action-btn:hover {
+    background-color: #0c6b9c;
+}
+
+.delete-btn {
+    background-color: #e74c3c; 
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
 }

@@ -28,7 +28,7 @@ $produto = $result->fetch_assoc();
         <label for="imagem">Imagem:</label>
         <input type="file" id="imagem" name="imagem">
         <img src="uploads/<?php echo $produto['imagem']; ?>" alt="Imagem" width="100">
-        <input type="submit" value="Atualizar">
+        <button class="action-btn">Atualizar Produto</button></a>
     </form>
     <a href="../index.php">Voltar</a>
 </body>

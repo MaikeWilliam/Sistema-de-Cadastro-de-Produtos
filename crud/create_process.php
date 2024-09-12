@@ -15,10 +15,11 @@ if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] == 0) {
 $sql = "INSERT INTO produtos (nome, preco, descricao, imagem) VALUES ('$nome', '$preco', '$descricao', '$imagem')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Produto criado com sucesso!";
+    echo "<div class='success-message'><p>Produto adicionado com sucesso!</p></div>";
 } else {
     echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
+<a href="../index.php"><button>Voltar para a Página Inicial</button></a>

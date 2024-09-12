@@ -19,7 +19,7 @@
         <textarea id="descricao" name="descricao"></textarea>
         <label for="imagem">Imagem:</label>
         <input type="file" id="imagem" name="imagem">
-        <input type="submit" value="Salvar">
+        <button class="action-btn">Salvar Produto</button></a>
     </form>
     <a href="../index.php">Voltar</a>
 </body>

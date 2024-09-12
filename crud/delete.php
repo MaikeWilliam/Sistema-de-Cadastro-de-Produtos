@@ -15,10 +15,11 @@ if ($conn->query($sql) === TRUE) {
     if ($imagem) {
         unlink('uploads/' . $imagem);
     }
-    echo "Produto deletado com sucesso!";
+    echo "<div class='success-message'><p>Produto adicionado com sucesso!</p></div>";
 } else {
     echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
+<a href="../index.php"><button>Voltar para a Página Inicial</button></a>
